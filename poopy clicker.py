@@ -44,53 +44,132 @@ def clicked():
     if upg1 == 4:
         rnum = 16
 
+    if upg1 == 5:
+        rnum = 32
+
+    if upg1 == 6:
+        rnum = 64
+
+    if upg1 == 7:
+        rnum = 128
+
+    if upg1 == 8:
+        rnum = 256
+
+    if upg1 == 9:
+        rnum = 512
+
+    if upg1 == 10:
+        rnum = 1024
+
 #upgrades
 def upgrade():
     global upg1
     global count
 
-    if count >= 100:
-        count = count - 100
+    if count >= 200:
+        count = count - 200
         upg1 = 1
 
 def upgrade2():
     global upg1
     global count
 
-    if count >= 200:
-        count = count - 200
+    if count >= 400:
+        count = count - 400
         upg1 = 2
 
 def upgrade3():
     global upg1
     global count
 
-    if count >= 400:
-        count = count - 400
+    if count >= 800:
+        count = count - 800
         upg1 = 3
 
 def upgrade4():
     global upg1
     global count
 
-    if count >= 800:
-        count = count - 800
+    if count >= 1600:
+        count = count - 1600
         upg1 = 4
+
+def upgrade5():
+    global upg1
+    global count
+
+    if count >= 3200:
+        count = count - 3200
+        upg1 = 5
+
+def upgrade6():
+    global upg1
+    global count
+
+    if count >= 6400:
+        count = count - 6400
+        upg1 = 6
+
+
+def upgrade7():
+    global upg1
+    global count
+
+    if count >= 12800:
+        count = count - 12800
+        upg1 = 7
+
+def upgrade8():
+    global upg1
+    global count
+
+    if count >= 25600:
+        count = count - 25600
+        upg1 = 8
+
+def upgrade9():
+    global upg1
+    global count
+
+    if count >= 51200:
+        count = count - 51200
+        upg1 = 9
+
+def upgrade10():
+    global upg1
+    global count
+
+    if count >= 102400:
+        count = count - 102400
+        upg1 = 10
 
 #criar janela nova
 def janela():
     janela2 = tk.Toplevel()
-    janela2.geometry("500x500")
+    janela2.geometry("250x170")
     janela2.configure(background="#9a9a9a")
     janela2.resizable(width=False, height=False)
-    custom_button = ttk.Button(janela2, text="2x | $100", command=upgrade)
+    custom_button = ttk.Button(janela2, text="2x | $200", command=upgrade)
     custom_button.place(x=0, y=0)
-    custom_button = ttk.Button(janela2, text="4x | $200", command=upgrade2)
+    custom_button = ttk.Button(janela2, text="4x | $400", command=upgrade2)
     custom_button.place(x=0, y=35)
-    custom_button = ttk.Button(janela2, text="8x | $400", command=upgrade3)
+    custom_button = ttk.Button(janela2, text="8x | $800", command=upgrade3)
     custom_button.place(x=0, y=70)
-    custom_button = ttk.Button(janela2, text="16x | $800", command=upgrade4)
+    custom_button = ttk.Button(janela2, text="16x | $1600", command=upgrade4)
     custom_button.place(x=0, y=105)
+    custom_button = ttk.Button(janela2, text="32x | $3200", command=upgrade5)
+    custom_button.place(x=0, y=140)
+    custom_button = ttk.Button(janela2, text="64x | $6400", command=upgrade6)
+    custom_button.place(x=132, y=0)
+    custom_button = ttk.Button(janela2, text="128x | $12800", command=upgrade7)
+    custom_button.place(x=132, y=35)
+    custom_button = ttk.Button(janela2, text="256x | $25600", command=upgrade8)
+    custom_button.place(x=132, y=70)
+    custom_button = ttk.Button(janela2, text="512x | $51200", command=upgrade9)
+    custom_button.place(x=132, y=105)
+    custom_button = ttk.Button(janela2, text="1024x | $102400", command=upgrade10)
+    custom_button.place(x=132, y=140)
 
 #janela principal
 windows = tk.Tk()
